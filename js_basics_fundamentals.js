@@ -55,4 +55,86 @@ MinValue = Math.min(Number(a), Number(b), Number(c));
 console.log(MaxValue);
 console.log(MinValue); */
 
-//task4
+/* //task4
+const ucFirst = (str) => {
+    return str[0].toUpperCase() + str.slice(1, );
+}
+console.log(ucFirst("Вася")); */
+
+/* //task5
+let string = prompt("Let string");
+const extractCurrencyValue = (str) => {
+    for (let element in str) {
+        if (str[element] = Number) {
+            return str.slice(1, );
+        }
+    }
+}
+console.log(extractCurrencyValue(string)); */
+
+/* //task6
+let num = prompt("Let number");
+if (num > 0) {
+    alert("1")
+} else if (num == 0) {
+    alert("0")
+} else if (num < 0) {
+    alert("-1")
+} else {
+    alert("Error")
+} */
+
+/* //task7
+let age = prompt("Let age");
+if (age > 14 && age <= 90) {
+    alert("In the range");
+} else {
+    alert("Out of range");
+} */ // anu >14 si anu<=90
+
+/* //task7 v2
+let age = prompt("Let age");
+if (!(age < 14) && !(age > 90)) {
+    alert("In the range");
+} else {
+    alert("Out of range");
+} */
+
+/* //task8
+let username = prompt("Enter username");
+let password = prompt("Enter password");
+if (username && password) {
+    alert("Hi!");
+} else if (!username && password) {
+    alert("Wrong username");
+} else if (!password && username) {
+    alert("Wrong password");
+} else {
+    alert("Validation error")
+}
+console.log(username);
+console.log(password); */
+
+/* //task9
+let name = prompt("Enter your name");
+if (!name || !isNaN(Number(name))) {
+    alert("It is not a name")
+} else {
+    alert(`Hi ${name}`);
+    if (confirm("Do you know javascript?")) {
+        alert("You are good")
+    } else {
+        alert("You can start right now")
+    }
+} */
+
+/* //task10
+let num = prompt("Let number");
+const dividers = (number) => {
+    for (let i = 0; i <= number; i++) {
+        if (number % i == 0) {
+            alert(`Dividers of ${num} is ${i}`)
+        }
+    }
+}
+dividers(num); */
