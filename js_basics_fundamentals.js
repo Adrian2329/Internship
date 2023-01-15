@@ -40,18 +40,18 @@ let start = Number(prompt("Let first number"));
 let end = Number(prompt("Let last number"));
 let n = 0;
 for (; start <= end; start++) {
-    if (start % 2 == 0) {
+    if (!(start % 2)) {
         n += start;
     }
 }
 console.log(n); */
 
 /* //task3
-let a = prompt("a=");
-let b = prompt("b=");
-let c = prompt("c=");
-MaxValue = Math.max(Number(a), Number(b), Number(c));
-MinValue = Math.min(Number(a), Number(b), Number(c));
+let a = Number(prompt("a="));
+let b = Number(prompt("b="));
+let c = Number(prompt("c="));
+MaxValue = Math.max(a, b, c));
+MinValue = Math.min(a, b, c));
 console.log(MaxValue);
 console.log(MinValue); */
 
@@ -62,15 +62,17 @@ const ucFirst = (str) => {
 console.log(ucFirst("Вася")); */
 
 /* //task5
-let string = prompt("Let string");
+let string = prompt("Let string"); //3242DSADA
 const extractCurrencyValue = (str) => {
-    for (let element in str) {
-        if (str[element] = Number) {
-            return str.slice(1, );
+    let sir = ``;
+    for (let element of str) {
+        if (!isNaN(element)) {
+            sir += element;
         }
     }
+    console.log(sir); //``
 }
-console.log(extractCurrencyValue(string)); */
+extractCurrencyValue(string); */
 
 /* //task6
 let num = prompt("Let number");
@@ -94,7 +96,7 @@ if (age > 14 && age <= 90) {
 
 /* //task7 v2
 let age = prompt("Let age");
-if (!(age < 14) && !(age > 90)) {
+if (!((age < 14) && (age > 90))) {
     alert("In the range");
 } else {
     alert("Out of range");
