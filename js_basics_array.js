@@ -1,63 +1,58 @@
 /* //task1 for
-let arr = [];
+let arr = []; //n elemente
 let n = Number(prompt("Let max range"));
-for (let i = 0; i < n; i++) {
+for (let i = 0; i < n; i++) { // introducem pina la n elemente
     let element = Number(prompt(`Enter a ${i+1} number`));
-    console.log(typeof(element));
     if (isNaN(element)) {
         alert("Is not a number")
     } else {
         arr.push(element);
     }
 }
-console.log(arr);
- */
-
-
-
-
-/* //task1 for in
-let arr = [];
-let n = Number(prompt("Let number n="));
-for (let iter = 0; iter < n; iter++) {
-    if (typeof(iter) == 'number') {
-        arr[iter] = prompt(`Enter a ${iter+1} number`);
-    } else {
-        alert("Is not a number");
-    }
-}
 console.log(arr); */
+/* for (let e = 0; e < arr.length; e++) {
+    console.log(e);
+} */
 
+//for in
+/* for (let e in arr) {
+    console.log(e);
+} */
 
+/* //for of
+for (let e of arr) {
+    console.log(e);
+} */
 
+/* //foreach
+arr.forEach((e, index, array) => {
+    console.log(e);
+    console.log(index);
+    console.log(array);
+}); */
 
+/* //map
+let ar = arr.map((e) => e * 2);
+console.log(ar); */
 
 /* //task 2
-let arr = [1, 5, 0, -5, 30, 100, -500, 0, 100, 55]
+let arr = [1, 5, 0, -5, 30, 100, -500, 0, 100, 55];
 let five = [];
-let MaxMin = [];
 let reverse = arr.sort((a, b) => a - b);
 let MaxValue = Math.max(...arr);
 let MinValue = Math.min(...arr);
 const average = arr.reduce((a, b) => a + b, 0) / arr.length;
-if (arr.length >= 10) {
-    arr.forEach(element => {
-        if (element < 5) {
-            five.push(element);
-        }
-    });
-}
-MaxMin.push(MaxValue, MinValue);
+five = arr.filter((element) => element > 5);
+console.log(MaxValue, MinValue);
 console.log(average);
 console.log(reverse);
-console.log(MaxMin);
-console.log(five); */
-
-/* } else if (typeof(element) == 'number' && !element) {
-      alert("Is not a number or you dont introduce any element")
-  } else {
-      alert("Minimum 10 elements")
-  } */
+console.log(five);
+let media = arr.filter((element) => element > average); */
+/* arr.forEach((element) => {
+    if (element > average) {
+        console.log(element);
+    }
+}) */
 
 /* //task3
 styles = ["Джаз", "Блюз"];
@@ -72,18 +67,20 @@ styles.unshift("Рэп", "Регги");
 console.log(styles); */
 
 /* //task4
-let suma = 0;
 let arr = [];
-let element;
 const sumInputNumbers = (num) => {
+    let suma = 0;
+    let element = ``;
     do {
         element = Number(prompt("Give element"));
-        arr.push(element)
-    } while (!isNaN(element) && (element) || element == 0);
+        if (!isNaN(element)) {
+            arr.push(element)
+        }
+    } while (!isNaN(element) && element >= 0);
     for (element of arr) {
         suma += element;
     }
-    return arr,suma;  
+    return suma;
 }
 
 console.log(sumInputNumbers()); */
@@ -107,12 +104,21 @@ const sumInputNumbers = (num) => {
 console.log(sumInputNumbers()); */
 
 /* //task5
-let array = [1, 2, 3];
-const convert = (arr) => {
-    const arr = array.map(num => num * 2)
-    return arr;
+let arr = [1, 2, 3];
+let square = (item) => {
+    arr.forEach(num => {
+        let sqr = num * num;
+        console.log(sqr);
+    })
 }
-console.log(convert()); */
+
+let convert = (fn, array) => {
+    return square(arr);
+}
+console.log(convert(square, arr));
+console.log(arr); */
+
+
 
 /* //task6
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -175,4 +181,4 @@ console.log(firstColor);
 console.log(secondColor);
 console.log(Other); */
 
-let colors = ["white", "blue", "yellow", "black", "red", "green"] = [FirstColor, SecondColor, Other]
+/* let colors = ["white", "blue", "yellow", "black", "red", "green"] = [FirstColor, SecondColor, Other] */
