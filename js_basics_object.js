@@ -93,3 +93,61 @@ const person = {
     },
     address: `Moldova`
 } */
+
+//task8
+const weekDays = {
+    "Mo": 'Понедельник',
+    "Tu": 'Вторник',
+    "We": 'Среда',
+    "Th": 'Четверг',
+    "Fr": 'Пятница',
+    "Sa": 'Суббота',
+    "Su": 'Воскресенье',
+}
+const translate = (day) => {
+    for (let key in weekDays) {
+        weekDays[key] = 'Luni',
+            weekDays[key] = 'Marti',
+            weekDays[key] = 'Miercuri',
+            weekDays[key] = 'Joi',
+            weekDays[key] = 'Vineri',
+            weekDays[key] = 'Simbata',
+            weekDays[key] = 'Duminica'
+    }
+    console.log(weekDays);
+}
+translate(weekDays);
+
+//task 9
+
+//task10
+let person1 = {
+    name: `Vasile`,
+    age: 123,
+    salary: 0,
+    contacts: {
+        phone: `112`,
+        email: 'email @domain.com',
+    },
+    address: `Moldova`
+}
+let person2 = {
+    name: `Marcel`,
+    age: 123,
+    salary: 1542.33,
+    contacts: {
+        phone: `112`,
+        email: 'emailmarcel@.bk',
+    },
+    address: `Moldova`
+}
+let person = {
+
+}
+
+const Intersection = (first, second) => {
+    if (Object.values(first) === Object.values(second)) {
+        person
+    }
+
+}
