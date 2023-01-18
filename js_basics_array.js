@@ -132,23 +132,13 @@ const extract = (start, end) => {
 }
 extract(2, 5); */
 
-/* //task8
+//task8
 let color = prompt("Give color")
 const colors = ["red", "green", "blue"];
-const checkColors = (element) => {
-    colors.forEach(col => {
-        if (color == "red") {
-            alert(colors.indexOf("red"));
-        } else if (color == "green") {
-            alert(colors.indexOf("green"));
-        } else if (color == "blue") {
-            alert(colors.indexOf("blue"));
-        } else {
-            alert(-1);
-        }
-    });
+const checkColors = (color) => {
+    alert(colors.indexOf(color));
 }
-checkColors(color); */
+checkColors(color);
 
 /* //task9
 const arr = [1, "a", 2, null, 3, undefined, 4, {}, 5, 6, `word`, 7, 8, false, 9, 100];
