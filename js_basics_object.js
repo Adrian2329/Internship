@@ -94,7 +94,7 @@ const person = {
     address: `Moldova`
 } */
 
-//task8
+/* //task8
 const weekDays = {
     "Mo": 'Понедельник',
     "Tu": 'Вторник',
@@ -116,11 +116,11 @@ const translate = (day) => {
     }
     console.log(weekDays);
 }
-translate(weekDays);
+translate(weekDays); */
 
 //task 9
 
-//task10
+/* //task10
 let person1 = {
     name: `Vasile`,
     age: 123,
@@ -146,8 +146,48 @@ let person = {
 }
 
 const Intersection = (first, second) => {
-    if (Object.values(first) === Object.values(second)) {
-        person
+    for (key in object) {
+        if (person1[key] === person2[key]) {
+            person3.
+        }
     }
+} */
 
+//tak11
+let avg = 0;
+let grup = [
+    person1 = {
+        name: 'First',
+        marks: [8, 10, 7, 5, 4],
+    },
+    person2 = {
+        name: 'Second',
+        marks: [9, 10, 2, 5, 7],
+    },
+    person3 = {
+        name: 'Third',
+        marks: [5, 7, 8, 9, 10],
+    },
+    person4 = {
+        name: 'Fourth',
+        marks: [2, 2, 2, 5, 2],
+    },
+    person5 = {
+        name: 'Fifth',
+        marks: [6, 10, 10, 9, 8],
+    }
+]
+
+const average = () => {
+    for (let pers of grup) {
+        const avg = pers.marks.reduce((a, b) => {
+            return a + b / pers.marks.length;
+        }, 0);
+        pers.average = avg;
+        console.log(media);
+    }
 }
+const fiv = []
+const five = () => {}
+five(grup)
+average(grup);
