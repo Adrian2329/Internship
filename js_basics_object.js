@@ -1,5 +1,5 @@
 /* //task1
-let user = {};
+const user = {};
 console.log(user);
 user.name = "John",
     console.log(user);
@@ -11,30 +11,30 @@ delete user.name;
 console.log(user); */
 
 /* //task2
-let salaries = {
+const salaries = {
     John: 100,
     Ann: 160,
     Pete: 130,
 }
-let salariu = (Object.values(salaries));
+const salariu = Object.values(salaries);
 const sum = salariu.reduce((a, b) => {
     return a + b;
 }, 0);
 console.log(sum); */
 
 /* //task3
-let menu = {
+const menu = {
     width: 200,
     height: 300,
     title: "My menu"
 };
-const multiplyNumeric = () => {
-    for (const key in menu) {
-        if (typeof(menu[key] == 'number')) {
-            menu[key] *= 2;
+const multiplyNumeric = (item) => {
+    for (const key in item) {
+        if (typeof(item[key] == 'number')) {
+            item[key] *= 2;
         }
     }
-    console.log(menu);
+    console.log(item);
 }
 multiplyNumeric(menu); */
 
@@ -154,25 +154,23 @@ const Intersection = (first, second) => {
 } */
 
 //tak11
-let avg = 0;
-let grup = [
-    person1 = {
+let grup = [{
         name: 'First',
         marks: [8, 10, 7, 5, 4],
     },
-    person2 = {
+    {
         name: 'Second',
         marks: [9, 10, 2, 5, 7],
     },
-    person3 = {
+    {
         name: 'Third',
         marks: [5, 7, 8, 9, 10],
     },
-    person4 = {
+    {
         name: 'Fourth',
         marks: [2, 2, 2, 5, 2],
     },
-    person5 = {
+    {
         name: 'Fifth',
         marks: [6, 10, 10, 9, 8],
     }
@@ -180,14 +178,43 @@ let grup = [
 
 const average = () => {
     for (let pers of grup) {
-        const avg = pers.marks.reduce((a, b) => {
+        pers.average = pers.marks.reduce((a, b) => {
             return a + b / pers.marks.length;
         }, 0);
-        pers.average = avg;
-        console.log(media);
+        console.log(pers);
     }
 }
-const fiv = []
-const five = () => {}
-five(grup)
+const five = (item) => {
+    for (let element of item) {
+        if (element.average > 5) {
+            console.log(element.name, element.average);
+        }
+    }
+}
+
+
+const MinMax = (arr) => {
+    let MaxValue = grup[0].average;
+    let MinValue = grup[0].average;
+    for (let element of arr) {
+        if (element.average > MaxValue) {
+            MaxValue = element.average;
+        }
+        if (element.average < MinValue) {
+            MinValue = element.average;
+        }
+    }
+    console.log(MaxValue);
+    console.log(MinValue);
+}
+
+const Sort = (arr) => {
+    for (let element of arr) {
+        element.average.sort();
+    }
+}
+
+Sort(grup);
 average(grup);
+five(grup);
+MinMax(grup);
