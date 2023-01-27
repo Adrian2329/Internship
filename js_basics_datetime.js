@@ -18,40 +18,39 @@ let getDaysInMonth = (month, year) => {
 console.log(getDaysInMonth(1, 2012));
 console.log(getDaysInMonth(2, 2012));
 console.log(getDaysInMonth(9, 2012));
-console.log(getDaysInMonth(12, 2012)); */
+console.log(getDaysInMonth(12, 2012));
+ */
 
 /* //task3
 let monthName = (item) => {
-    let monthsName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    const month = item.getMonth()
-    return monthsName[month]
+    return item.toLocaleString(`en-us`, { month: "long" });
 }
 console.log(monthName(new Date("10/11/2009")))
-console.log(monthName(new Date("11/13/2014"))); */
+console.log(monthName(new Date("12/13/2014"))); */
 
 /* //task4
-
 const compareDate = (first, second) => {
-    if (first.getTime() === second.getTime()) {
-        console.log(`${first}=${second}`);
-    } else if (first.getTime() > second.getTime()) {
-        console.log(`${first}>${second}`);
-    } else if (first.getTime() < second.getTime()) {
-        console.log(`${first}<${second}`);
+    const Date1 = first.getTime();
+    const Date2 = second.getTime()
+    if (Date1 === Date2) {
+        console.log(`Date1=Date2`);
+    } else if (Date1 > Date2) {
+        console.log(`Date1>Date2`);
+    } else if (Date1 < Date2) {
+        console.log(`Date1<Date2`);
     }
 }
-
 compareDate(new Date('11/14/2013 00:00'), new Date('11/14/2013 00:00'));
 compareDate(new Date('11/14/2013 00:01'), new Date('11/14/2013 00:00'));
 compareDate(new Date('11/14/2013 00:00'), new Date('11/14/2013 00:01')); */
 
 /* //task5
-let timeConverter = (min) => {
-    let hour = Math.round(min / 60)
-    let minutes = Math.round(min % 60);
-    return min + ` minutes= ` + hour + ` hour(s) and ` + minutes + ` minute(s)`;
+const timeConverter = (min) => {
+    const hour = Math.round(min / 60)
+    const minutes = min % 60;
+    return `${min} minutes = ${hour} hour(s) and ${minutes} minute(s)`;
 }
-console.log(timeConverter(70)); */
+console.log(timeConverter(750)); */
 
 /* //task6
 const currday = new Date();
@@ -64,15 +63,15 @@ const getInfo = () => {
     const day = age * 365;
     console.log(`${day} days`);
 }
-console.log(getInfo()) */
+getInfo() */
 
-/* //task7
+//task7
 const d = new Date(2014, 10, 2);
 const addYears = (date, years) => {
-    const copy = new Date(Number(date))
+    const copy = new Date(date)
     copy.setFullYear(date.getFullYear() + years)
     return copy
 }
-console.log(addYears(d, 10).toString()); */
+console.log(addYears(d, 10));
 
 //task8
