@@ -153,7 +153,7 @@ const Intersection = (first, second) => {
     }
 } */
 
-//tak11
+/* //tak11
 let grup = [{
         name: 'First',
         marks: [8, 10, 7, 5, 4],
@@ -184,6 +184,8 @@ const average = () => {
         console.log(pers);
     }
 }
+average(grup);
+
 const five = (item) => {
     for (let element of item) {
         if (element.average > 5) {
@@ -191,7 +193,7 @@ const five = (item) => {
         }
     }
 }
-
+five(grup);
 
 const MinMax = (arr) => {
     let MaxValue = grup[0].average;
@@ -207,14 +209,27 @@ const MinMax = (arr) => {
     console.log(MaxValue);
     console.log(MinValue);
 }
-
-const Sort = (arr) => {
-    for (let element of arr) {
-        element.average.sort();
-    }
-}
-
-Sort(grup);
-average(grup);
-five(grup);
 MinMax(grup);
+
+
+const grupSorted = grup.sort((a, b) => b.average - a.average);
+console.log(grupSorted);
+
+const medcl = grup.reduce((acum, i) => acum += i.average, 0) / grup.length;
+
+grup.forEach(person => {
+    if (person.average > medcl) {
+        console.log(person);
+    }
+}) */
+
+//task12
+const person = {
+    first: 'Ion',
+    last: 'Creanga',
+    company: 'Amintiri din copilarie SRL',
+}
+let pers = ``;
+const { first, last, company } = person;
+pers = `Name:${first} ${last},Company:${company}`;
+console.log(pers);
