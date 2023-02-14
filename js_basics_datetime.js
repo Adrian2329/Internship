@@ -65,13 +65,24 @@ const getInfo = () => {
 }
 getInfo() */
 
-//task7
+/* //task7
 const d = new Date(2014, 10, 2);
 const addYears = (date, years) => {
     const copy = new Date(date)
     copy.setFullYear(date.getFullYear() + years)
     return copy
 }
-console.log(addYears(d, 10));
+console.log(addYears(d, 10)); */
 
-//task8
+/* //task8
+function clock(){
+    var date = new Date(),
+           hours = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours(),
+           minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
+           seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
+    document.getElementById('clock').innerHTML = hours + ':' + minutes + ':' + seconds;
+  }
+  setInterval(clock, 1000);
+  clock();
+const btnStart=document.querySelector('.start');
+const btnStop=document.querySelector('.stop'); */
